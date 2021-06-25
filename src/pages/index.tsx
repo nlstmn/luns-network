@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
 import { withLayout, LayoutProps, menuItems } from "../components/Layout";
+import AboutComponent from "../components/About";
 import {
   Button,
   Segment,
@@ -13,46 +14,34 @@ import {
 
 const IndexPage = (props: LayoutProps) =>
   <div>
-    {/* Master head */}
     <Segment vertical inverted textAlign="center" className="masthead">
       <HeaderMenu
         Link={Link} pathname={props.location.pathname} items={menuItems} inverted
       />
       <Container text>
-        <Header inverted as="h1">Gatsby 2.0 - Starter kit</Header>
-        <Header inverted as="h2">Typescript - Jest - Semantic UI</Header>
+        <Header inverted as="h1">LÚNS Network</Header>
+        <Header inverted as="h2">Web | Mobile | App Development</Header>
         <Button primary size="huge">Get started!</Button>
       </Container>
     </Segment>
 
-    {/* About this starter */}
-    <Segment vertical className="stripe">
+    <Segment vertical className="stripe bg-lightblue">
       <Grid stackable verticalAlign="middle" className="container">
         <Grid.Row>
-          <Grid.Column width="8">
-            <Header>Lorem ipsum</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
+          <Grid.Column width="8" className="whitebox">
+            <Header>What do we do?</Header>
+            <p>Developing applications for You.</p>
+            <Header>Which kind of applications?</Header>
+            <p>Web and Mobile applications using the best technologies suitable for given business type.</p>
           </Grid.Column>
           <Grid.Column width="6" floated="right">
-            {/* TODO replace with a pretty GIF */}
-            <Header>Lorem ipsum</Header>
+            <Header>« Achieving our goals »</Header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-                </p>
+              We prioritize a feel for the cross-platform and hybrid applications,
+              taking the time to lock down a consistent functionality and responsiveness
+              between platforms and app versions. Our goal is to improve and create
+              tools of our customers by ensuring that technology meets their needs.
+            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -65,42 +54,46 @@ const IndexPage = (props: LayoutProps) =>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Identifying Needs
             </Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+            <p>We accurately identify your needs with analyzes and technological solutions.</p>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Strategic System Analysis
             </Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+            <p>We do our researches, and we plan the most suitable system.</p>
           </Grid.Column>
           <Grid.Column>
             <Header icon>
               <Icon name="wizard"></Icon>
-              A kind of magic!
+              Visual Design
             </Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas eaque at quae cupiditate aspernatur quibusdam!
-                  Distinctio quod non, harum dolorum earum molestias,
-                  beatae expedita aliquam dolorem asperiores nemo amet quaerat.
-                </p>
+            <p>We make Responsive and Flat designs that match all screen sizes and resolutions.</p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
+
+    {/* Our clients */}
+    <Segment vertical className="stripe bg-lightblue">
+      <Grid stackable verticalAlign="middle" className="container">
+        <Grid.Row>
+          <Grid.Column width="6">
+            <Header>Let's develop application together.</Header>
+            <p>info@lunsnetwork.com</p>
+            <p>+90 553 912 26 92</p>
+          </Grid.Column>
+          <Grid.Column width="8" floated="right">
+            <Header>Let's develop application together.</Header>
+            <p>info@lunsnetwork.com</p>
+            <p>+90 553 912 26 92</p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+
   </div>;
 
 export default withLayout(IndexPage);
