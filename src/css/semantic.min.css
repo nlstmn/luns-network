@@ -543,7 +543,7 @@ to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 .ui.inverted.yellow.basic.button:focus,.ui.inverted.yellow.basic.buttons .button:focus{box-shadow:0 0 0 2px #f5d500 inset!important;color:#ffe21f!important}
 .ui.inverted.yellow.basic.active.button,.ui.inverted.yellow.basic.buttons .active.button,.ui.inverted.yellow.buttons .basic.active.button{box-shadow:0 0 0 2px #ffdf05 inset!important;color:#ffe21f!important}
 .ui.inverted.yellow.basic.button:active,.ui.inverted.yellow.basic.buttons .button:active,.ui.inverted.yellow.buttons .basic.button:active{box-shadow:0 0 0 2px #ebcd00 inset!important;color:#ffe21f!important}
-.ui.primary.button,.ui.primary.buttons .button{background-color:#2185d0;color:#fff;text-shadow:none;background-image:none}
+.ui.primary.button,.ui.primary.buttons .button{background-color:#8d35ab;color:#fff;text-shadow:none;background-image:none}
 .ui.primary.button{box-shadow:0 0 0 0 rgba(34,36,38,.15) inset}
 .ui.primary.button:hover,.ui.primary.buttons .button:hover{background-color:#1678c2;color:#fff;text-shadow:none}
 .ui.primary.button:focus,.ui.primary.buttons .button:focus{background-color:#0d71bb;color:#fff;text-shadow:none}
@@ -655,7 +655,7 @@ to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 .ui.clearing.divider{clear:both}
 .ui.section.divider{margin-top:2rem;margin-bottom:2rem}
 i.flag:not(.icon){display:inline-block;width:16px;height:11px;line-height:11px;vertical-align:baseline;margin:0 .5em 0 0;text-decoration:inherit;speak:none;font-smoothing:antialiased;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-i.flag:not(.icon):before{display:inline-block;content:'';background:url(themes/default/assets/images/flags.png) -108px -1976px no-repeat;width:16px;height:11px}
+i.flag:not(.icon):before{display:inline-block;content:'';width:16px;height:11px}
 i.flag.ad:before,i.flag.andorra:before{background-position:0 0}
 i.flag.ae:before,i.flag.uae:before,i.flag.united.arab.emirates:before{background-position:0 -26px}
 i.flag.af:before,i.flag.afghanistan:before{background-position:0 -52px}
@@ -1035,7 +1035,6 @@ a.ui.inverted.grey.header:hover{color:#cfd0d2!important}
 .ui.large.attached.header{font-size:1.14285714em}
 .ui.huge.attached.header{font-size:1.42857143em}
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){font-size:1.28571429em}
-@font-face{font-family:Icons;src:url(themes/default/assets/fonts/icons.eot);src:url(themes/default/assets/fonts/icons.eot?#iefix) format('embedded-opentype'),url(themes/default/assets/fonts/icons.woff2) format('woff2'),url(themes/default/assets/fonts/icons.woff) format('woff'),url(themes/default/assets/fonts/icons.ttf) format('truetype'),url(themes/default/assets/fonts/icons.svg#icons) format('svg');font-style:normal;font-weight:400;font-variant:normal;text-decoration:inherit;text-transform:none}
 i.icon{display:inline-block;opacity:1;margin:0 .25rem 0 0;width:1.18em;height:1em;font-family:Icons;font-style:normal;font-weight:400;text-decoration:inherit;text-align:center;speak:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 i.icon:before{background:0 0!important}
 i.icon.loading{height:1em;line-height:1;-webkit-animation:icon-loading 2s linear infinite;animation:icon-loading 2s linear infinite}

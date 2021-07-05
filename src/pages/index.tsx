@@ -3,6 +3,10 @@ import { Link } from "gatsby";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
 import { withLayout, LayoutProps, menuItems } from "../components/Layout";
 import AboutComponent from "../components/About";
+import IconDev from "../assets/development.inline.svg";
+import IconMail from "../assets/mail.inline.svg";
+import IconPhone from "../assets/phone.inline.svg";
+import * as MainPage from "../../public/page-data/index/main-page.json";
 import {
   Button,
   Segment,
@@ -30,9 +34,9 @@ const IndexPage = (props: LayoutProps) =>
         <Grid.Row>
           <Grid.Column width="8" className="whitebox">
             <Header>What do we do?</Header>
-            <p>Developing applications for You.</p>
+            <p>💡 Developing applications for You.</p>
             <Header>Which kind of applications?</Header>
-            <p>Web and Mobile applications using the best technologies suitable for given business type.</p>
+            <p>💡 Web and Mobile applications using the best technologies suitable for given business type.</p>
           </Grid.Column>
           <Grid.Column width="6" floated="right">
             <Header>« Achieving our goals »</Header>
@@ -47,53 +51,59 @@ const IndexPage = (props: LayoutProps) =>
       </Grid>
     </Segment>
 
-    {/* Key features */}
     <Segment vertical className="stripe alternate feature">
       <Grid columns="3" textAlign="center" divided relaxed stackable className="container">
         <Grid.Row>
-          <Grid.Column>
-            <Header icon>
-              <Icon name="wizard"></Icon>
-              Identifying Needs
-            </Header>
-            <p>We accurately identify your needs with analyzes and technological solutions.</p>
-          </Grid.Column>
-          <Grid.Column>
-            <Header icon>
-              <Icon name="wizard"></Icon>
-              Strategic System Analysis
-            </Header>
-            <p>We do our researches, and we plan the most suitable system.</p>
-          </Grid.Column>
-          <Grid.Column>
-            <Header icon>
-              <Icon name="wizard"></Icon>
-              Visual Design
-            </Header>
-            <p>We make Responsive and Flat designs that match all screen sizes and resolutions.</p>
-          </Grid.Column>
+          {
+            MainPage.lifecycle.map((data: any, index: any) => {
+              return (
+                <Grid.Column>
+                  {/*<li key={`content_item_${index}`}>{data.item}</li>*/}
+                  <Header icon>
+                    <Icon name="wizard"></Icon>
+                    {data.title}
+                  </Header>
+                  <p>{data.text}</p>
+                </Grid.Column>
+              )
+            })
+          }
         </Grid.Row>
       </Grid>
     </Segment>
 
-    {/* Our clients */}
     <Segment vertical className="stripe bg-lightblue">
       <Grid stackable verticalAlign="middle" className="container">
         <Grid.Row>
-          <Grid.Column width="6">
-            <Header>Let's develop application together.</Header>
-            <p>info@lunsnetwork.com</p>
-            <p>+90 553 912 26 92</p>
+          <Grid.Column width="5" className="text-center">
+            <IconDev className="mainpage-icondev" />
           </Grid.Column>
-          <Grid.Column width="8" floated="right">
-            <Header>Let's develop application together.</Header>
-            <p>info@lunsnetwork.com</p>
-            <p>+90 553 912 26 92</p>
+          <Grid.Column width="9" floated="right">
+            <Header className="mainpage-heading-big">Let's develop application together.</Header>
+            <p>
+              <a
+                href="mailto:info@lunsnetwork.com"
+                aria-label="Email"
+                rel="noopener noreferrer"
+                className="mainpage-contactlink"
+              >
+                <IconMail className="mainpage-iconcontact" />info@lunsnetwork.com
+              </a>
+            </p>
+            <p>
+              <a
+                href="tel:+905539122692"
+                aria-label="Email"
+                rel="noopener noreferrer"
+                className="mainpage-contactlink"
+              >
+                <IconPhone className="mainpage-iconcontact" />+90 553 912 26 92
+              </a>
+            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
-
   </div>;
 
 export default withLayout(IndexPage);
